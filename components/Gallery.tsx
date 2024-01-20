@@ -25,8 +25,8 @@ const Gallery = () => {
           ))}
         </div>
       </div>
-        <div className='fixed top-0 left-0 bg-[rgba(0,0,0,0.8)] w-[100vw] h-[100vh]' style={{display: open? 'block' : 'none'}}>
-          <span onClick={()=>setopen('')} className='absolute top-2 right-5 font-extrabold cursor-pointer regular-64 text-gold-50'>&times;</span>
+        <div className='fixed z-20 top-0 left-0 bg-[rgba(0,0,0,0.8)] w-[100vw] h-[100vh]' style={{display: open? 'block' : 'none'}}>
+          <span onClick={()=>setopen('')} className='absolute top-10 z-10 right-5 font-extrabold cursor-pointer regular-64 text-gold-50'>&times;</span>
           <Image src={open} alt='furniture' width={500} height={500} className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] max-h-[95%] max-w-[95%]' />
         </div>
       

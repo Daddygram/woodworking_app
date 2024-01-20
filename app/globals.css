@@ -12,9 +12,9 @@
 
 body {
   font-family: Inter;
-  background: rgb(70,62,49);
   /* background: linear-gradient(90deg, rgba(70,62,49,1) 0%, rgba(111,96,73,1) 46%, rgba(153,126,91,1) 100%); */
   scroll-behavior: smooth;
+  @apply bg-gold-10
 }
 
 @layer utilities {
@@ -39,7 +39,7 @@ body {
   }
 
   .padding-container {
-    @apply px-6 lg:px-20 3xl:px-0;
+    @apply lg:px-20 3xl:px-10;
   }
 
   .flexCenter {
@@ -171,5 +171,26 @@ body {
   }
   100% {
     transform: translateX(calc(-250px*6));
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  #banner-img {
+    display: none;
+  }
+  .about {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .howsection {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .howsection {
+    max-width: 90%;
   }
 }

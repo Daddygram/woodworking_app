@@ -11,6 +11,7 @@ module.exports = {
         gold: {
           50: '#EACDA3',
           90: '#D6AE7B',
+          10: 'rgb(70,62,49)'
         },
         gray: {
           10: '#EEEEEE',

@@ -7,7 +7,7 @@ export const Slider = () => {
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
 
-  const handleMove = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const handleMove = (event:any) => {
     if (!isDragging) return;
 
     const rect = event.currentTarget.getBoundingClientRect();
@@ -17,20 +17,44 @@ export const Slider = () => {
     setSliderPosition(percent);
   };
 
-  const handleMouseDown = () => {
+  const handleStart = () => {
     setIsDragging(true);
   };
 
-  const handleMouseUp = () => {
+  const handleEnd = () => {
     setIsDragging(false);
   };
 
+  const handleTouchMove = (event:any) => {
+    const rect = event.target.getBoundingClientRect();
+    const x = Math.max(0, Math.min(event.touches[0].clientX - rect.left, rect.width));
+    const percent = Math.max(0, Math.min((x / rect.width) * 100, 100));
+
+    setSliderPosition(percent);
+  };
+
+  const handleTouchStart = (event:any) => {
+    handleStart();
+    const rect = event.target.getBoundingClientRect();
+    const x = Math.max(0, Math.min(event.touches[0].clientX - rect.left, rect.width));
+    const percent = Math.max(0, Math.min((x / rect.width) * 100, 100));
+
+    setSliderPosition(percent);
+  };
+
+  const handleTouchEnd = () => {
+    handleEnd();
+  };
+
   return (
-    <div className="w-full relative" onMouseUp={handleMouseUp}>
+    <div className="w-full relative" onTouchEnd={handleTouchEnd}>
       <div
         className="relative w-full max-w-[900px] aspect-[4/3] m-auto overflow-hidden select-none rounded-sm"
+        onTouchMove={handleTouchMove}
+        onTouchStart={handleTouchStart}
         onMouseMove={handleMove}
-        onMouseDown={handleMouseDown}
+        onMouseDown={handleStart}
+        onMouseUp={handleEnd}
       >
         <Image alt="" fill priority src={"/real-kitchen.jpg"} />
 
@@ -42,7 +66,6 @@ export const Slider = () => {
         </div>
 
         {/* Horizontal Arrows */}
-        
 
         <div
           className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize"
@@ -52,8 +75,8 @@ export const Slider = () => {
         >
           <div className="bg-white absolute rounded-full h-5 w-5 -left-2 top-[calc(50%-5px)]" />
           <div className="absolute top-[calc(50%+4px)] left-[50%] transform -translate-x-1/2 -translate-y-1/2">
-          <span className="text-black">&#x2194;</span>
-        </div>
+            <span className="text-black">&#x2194;</span>
+          </div>
         </div>
       </div>
     </div>

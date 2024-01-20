@@ -37,10 +37,10 @@ const HowSection = () => {
   }, [currentStep])
 
   return (
-    <section className='max-container flexCenter flex-col mt-[200px] relative'>
+    <section className='max-container flexCenter flex-col mt-[200px] relative' id='steps'> 
       <h2 className='capitalize regular-40 text-gold-90'>How does this work?</h2>
-      <div className='flexCenter gap-10 mt-10'>
-        <div className='h-[500px] overflow-hidden rounded-md'>
+      <div className='flexCenter gap-10 mt-10 howsection'>
+        <div className='overflow-hidden rounded-md lg:ml-2'>
           {[1, 2, 3, 4].map((step) => (
             <Image
               key={step}
