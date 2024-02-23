@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <nav className="fixed w-[100vw] bg-gold-10 flexBetween padding-container z-10">
         <Link href={"/"}>
-            <Image src={"/mamas logo 1.png"} alt="logo" width={100} height={100} />
+            <Image src={"/woodko-logo.png"} alt="logo" width={100} height={100} />
         </Link>
         
           <ul className={`${burger ? "fixed right-0 top-0 w-[100vw] h-[100vh] flexCenter flex-col bg-gold-10" : "hidden"} " lg:flexCenter gap-14 h-full"`}>
