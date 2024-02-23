@@ -9,7 +9,7 @@ const Hero = () => {
         className="absolute capitalize text-white outline outline-gold-50 cursor-pointer px-4 py-2 active:translate-x-0.5 active:translate-y-0.5 
                   hover:shadow-[0.5rem_0.5rem_#D6AE7B,-0.5rem_-0.5rem_#EACDA3] hover:outline-none transition-all">
           <button>
-              View Our Work
+              ჩვენი ნამუშევრები
           </button>
         </Link>
     </section>

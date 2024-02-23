@@ -16,16 +16,16 @@ const Navbar = () => {
       setburger(prev => !prev)
   }
   return (
-    <nav className="fixed w-[100vw] bg-gold-10 flexBetween padding-container z-10 py-5">
+    <nav className="fixed w-[100vw] bg-gold-10 flexBetween padding-container z-10">
         <Link href={"/"}>
-            <Image src={"/aveji-logo.png"} alt="logo" width={200} height={50} />
+            <Image src={"/mamas logo 1.png"} alt="logo" width={100} height={100} />
         </Link>
         
           <ul className={`${burger ? "fixed right-0 top-0 w-[100vw] h-[100vh] flexCenter flex-col bg-gold-10" : "hidden"} " lg:flexCenter gap-14 h-full"`}>
-            <li className="regular-16 cursor-pointer pb-1.5 transition-all hover:font-bold uppercase text-gold-90"><Link href={'#home'} onClick={(() => closeBurgerMenu())}>Home</Link></li>
-            <li className="regular-16 cursor-pointer pb-1.5 transition-all hover:font-bold uppercase text-gold-90"><Link href={'#about'} onClick={(() => closeBurgerMenu())}>About Us</Link></li>
-            <li className="regular-16 cursor-pointer pb-1.5 transition-all hover:font-bold uppercase text-gold-90"><Link href={'#gallery'} onClick={(() => closeBurgerMenu())}>Gallery</Link></li>
-            <li className="regular-16 cursor-pointer pb-1.5 transition-all hover:font-bold uppercase text-gold-90"><Link href={'#steps'} onClick={(() => closeBurgerMenu())}>Contact</Link></li>
+            <li className="regular-16 cursor-pointer pb-1.5 transition-all hover:font-bold uppercase text-gold-90"><Link href={'#home'} onClick={(() => closeBurgerMenu())}>მთავარი</Link></li>
+            <li className="regular-16 cursor-pointer pb-1.5 transition-all hover:font-bold uppercase text-gold-90"><Link href={'#about'} onClick={(() => closeBurgerMenu())}>ჩვენს შესახებ</Link></li>
+            <li className="regular-16 cursor-pointer pb-1.5 transition-all hover:font-bold uppercase text-gold-90"><Link href={'#gallery'} onClick={(() => closeBurgerMenu())}>გალერეა</Link></li>
+            <li className="regular-16 cursor-pointer pb-1.5 transition-all hover:font-bold uppercase text-gold-90"><Link href={'#steps'} onClick={(() => closeBurgerMenu())}>კონტაქტი</Link></li>
           </ul>
         
         <input type="checkbox" id="check" className="hidden"/>

@@ -4,10 +4,10 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='flexBetween h-[25vh] pt-[80px]'>
+    <footer className='flexBetween pt-[80px]'>
       <p className='text-gold-50 w-[200px] ml-5'>Copyright 2024 &copy; All Rights Reserved</p>
       <Link href={"/"}>
-            <Image src={"/aveji-logo.png"} alt="logo" width={200} height={50} />
+            <Image src={"/mamas logo 1.png"} alt="logo" width={200} height={200} />
       </Link>
       <div className='flex flex-col text-gold-50 w-[200px] text-right pr-10'>
         <p className='regular-16'>Socials:</p>

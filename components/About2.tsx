@@ -8,9 +8,9 @@ const About2 = () => {
             <Image src={"/furniture-banner-withfloor.png"} alt='furniture' width={800} height={800}/>
         </div>
         <div className='w-full md:p-20 p-5 flex flex-col'>
-            <p className='text-gray-10 pt-4 pb-4 regular-16 max-w-[500px] text-center self-end about'>Welcome to our website, where craftsmanship meets innovation. <span className='bold-16'>Our experience starts from 1998</span>. 
-            We bring your ideas to life through 3D designs, letting you see your vision before we build it. Whether it's custom furniture or stylish interiors, 
-            our dedication shines through. </p>
+            <p className='text-gray-10 pt-4 pb-4 regular-16 max-w-[500px] text-center self-end about'>მოგესალმებით ჩვენს საიტზე, სადაც ავეჯის დამზადების  
+და ინოვაციის იდეალურ შერწყმას შეხვდებით. <span className='bold-16'>1998 წლიდან დღემდე თქვენს იდეებს რეალობად ვაქცევთ</span>. 
+ასევე გთავაზობთ 3დ ნიმუშებს სასურველი მოდელის შექმნამდე, რათა თქვენ ხედვას  სრულყოფილი სახე მივცეთ.</p>
         </div>
     </section>
   )

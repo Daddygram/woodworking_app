@@ -165,6 +165,28 @@ body {
   box-shadow: 0 0 10px #495057;
 }
 
+.hand-icon {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  background-image: url('https://i.postimg.cc/8556gm60/hand.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+
+  transform: translate(50%, 50%);
+  animation: spin 2s infinite;
+  transform-origin: 52% 62%;
+  pointer-events: none;
+}
+
+@keyframes spin {
+  0% { transform: rotate(30deg); margin-left: 20px; }
+  50% { transform: rotate(-15deg); margin-left: -20px; }
+  100% { transform: rotate(0deg); margin-left: 20px; }
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);

@@ -4,15 +4,15 @@ import React, { useState } from 'react';
 
 const Gallery = () => {
   const images = [
-    '/1.jpg', '/2.jpg', '/3.jpg', '/4.jpg', '/5.jpg', '/6.jpg',
-    '/1.jpg', '/2.jpg', '/3.jpg', '/4.jpg', '/5.jpg', '/6.jpg',
+    '/1.jpg', '/2.jpg', '/3.jpg', '/4.jpg', '/5.jpg',
+    '/1.jpg', '/2.jpg', '/3.jpg', '/4.jpg', '/5.jpg',
   ]
 
   const [open, setopen] = useState('')
 
   return (
     <section id='gallery' className='max-container padding-container flexCenter flex-col mt-[200px]'>
-      <h2 className='capitalize regular-40 text-gold-90'>Check Out Our Projects</h2>
+      <h2 className='capitalize regular-40 text-gold-90'>ჩვენი ნამუშევრები</h2>
       <div className='grid place-items-center relative w-[90%] overflow-hidden mt-8'>
         <div className='w-[calc(300px*12)] flex gap-5 scroll hover:scroll-pause'>
           {images.map((image, i) => (

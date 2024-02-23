@@ -79,6 +79,9 @@ export const Slider = () => {
           </div>
         </div>
       </div>
+      <div className="swipe">
+        <div className="hand-icon"></div>
+      </div>
     </div>
   );
 };

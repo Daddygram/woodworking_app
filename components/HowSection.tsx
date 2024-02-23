@@ -7,10 +7,10 @@ const HowSection = () => {
   const [currentStep, setCurrentStep] = useState(1);
 
   const stepContent = [
-    'You share and discuss your ideas with us',
-    'We start creating your design with right measurements',
-    'Then we try to make it realistic for you to see what it will look like',
-    'Final product',
+    'პირველი ნაბიჯი იწყება თქვენი იდეების გაზიარებით',
+    'ჩვენ ვიწყებთ თქვენი დიზაინის აწყობას სწორი ზომებით',
+    'ვცდილობთ გავხადოთ რეალური და ისე წარმოგიდგინოთ',
+    'საბოლოო პროდუქტი',
   ]
 
   const handleStepClick = (step: React.SetStateAction<number>) => {
@@ -38,7 +38,7 @@ const HowSection = () => {
 
   return (
     <section className='max-container flexCenter flex-col mt-[200px] relative' id='steps'> 
-      <h2 className='capitalize regular-40 text-gold-90'>How does this work?</h2>
+      <h2 className='capitalize regular-40 text-gold-90'>როგორ მუშაობს ეს პროცესი?</h2>
       <div className='flexCenter gap-10 mt-10 howsection'>
         <div className='overflow-hidden rounded-md lg:ml-2'>
           {[1, 2, 3, 4].map((step) => (
@@ -65,7 +65,7 @@ const HowSection = () => {
                 currentStep === step ? 'opacity-100' : 'opacity-0'
               }`}></span>
               <h3 className='w-full transition-opacity duration-500 ease-in-out'>
-                Step {step}
+                ნაბიჯი {step}
               </h3>
               <p
                 className={`regular-14 transition-opacity duration-500 ease-in-out ${
@@ -80,7 +80,7 @@ const HowSection = () => {
           className="capitalize mt-5 text-white outline outline-gold-50 cursor-pointer px-4 py-2 active:translate-x-0.5 active:translate-y-0.5 
                     hover:shadow-[0.5rem_0.5rem_#D6AE7B,-0.5rem_-0.5rem_#EACDA3] hover:outline-none transition-all self-center">
             <button>
-                Get Started
+                დაიწყე!
             </button>
           </Link>
         </div>
