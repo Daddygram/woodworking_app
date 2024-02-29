@@ -15,6 +15,27 @@ const Navbar = () => {
   const toggleBurger = () => {
       setburger(prev => !prev)
   }
+
+  const scrollToSection = (sectionId:any) => {
+    closeBurgerMenu();
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const offset = section.offsetTop - 120;
+      window.scrollTo({ top: offset, behavior: 'smooth' });
+    }
+  };
+  
+  const NavigationLink = ({ href, sectionId, children }:any) => {
+    const handleClick = () => {
+      scrollToSection(sectionId);
+    };
+  
+    return (
+      <li className="regular-16 cursor-pointer pb-1.5 transition-all hover:font-bold uppercase text-gold-90">
+        <Link href={href} onClick={handleClick}>{children}</Link>
+      </li>
+    );
+  };
   return (
     <nav className="fixed w-[100vw] bg-gold-10 flexBetween padding-container z-10">
         <Link href={"/"}>
@@ -22,10 +43,10 @@ const Navbar = () => {
         </Link>
         
           <ul className={`${burger ? "fixed right-0 top-0 w-[100vw] h-[100vh] flexCenter flex-col bg-gold-10" : "hidden"} " lg:flexCenter gap-14 h-full"`}>
-            <li className="regular-16 cursor-pointer pb-1.5 transition-all hover:font-bold uppercase text-gold-90"><Link href={'#home'} onClick={(() => closeBurgerMenu())}>მთავარი</Link></li>
-            <li className="regular-16 cursor-pointer pb-1.5 transition-all hover:font-bold uppercase text-gold-90"><Link href={'#about'} onClick={(() => closeBurgerMenu())}>ჩვენს შესახებ</Link></li>
-            <li className="regular-16 cursor-pointer pb-1.5 transition-all hover:font-bold uppercase text-gold-90"><Link href={'#gallery'} onClick={(() => closeBurgerMenu())}>გალერეა</Link></li>
-            <li className="regular-16 cursor-pointer pb-1.5 transition-all hover:font-bold uppercase text-gold-90"><Link href={'#steps'} onClick={(() => closeBurgerMenu())}>კონტაქტი</Link></li>
+            <NavigationLink href="#home" sectionId="home">მთავარი</NavigationLink>
+            <NavigationLink href="#about" sectionId="about">ჩვენს შესახებ</NavigationLink>
+            <NavigationLink href="#steps" sectionId="steps">კონტაქტი</NavigationLink>
+            <NavigationLink href="#gallery" sectionId="gallery">გალერეა</NavigationLink>
           </ul>
         
         <input type="checkbox" id="check" className="hidden"/>

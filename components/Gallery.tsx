@@ -1,37 +1,55 @@
 "use client"
-import Image from 'next/image';
-import React, { useState } from 'react';
+import * as React from "react"
+import Autoplay from "embla-carousel-autoplay"
 
-const Gallery = () => {
-  const images = [
-    '/1.jpg', '/2.jpg', '/3.jpg', '/4.jpg', '/5.jpg',
-    '/1.jpg', '/2.jpg', '/3.jpg', '/4.jpg', '/5.jpg',
-  ]
+import { Card, CardContent } from "@/components/ui/card"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
-  const [open, setopen] = useState('')
+import Image1 from '../public/1.jpg';
+import Image2 from '../public/2.jpg';
+import Image3 from '../public/3.jpg';
+import Image4 from '../public/4.jpg';
+import Image5 from '../public/5.jpg';
+import Image from "next/image"
+
+export default function Gallery() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  )
+
+  const images = [Image1, Image2, Image3, Image4, Image5]; // Array of imported images
 
   return (
     <section id='gallery' className='max-container padding-container flexCenter flex-col mt-[200px]'>
       <h2 className='capitalize regular-40 text-gold-90'>ჩვენი ნამუშევრები</h2>
-      <div className='grid place-items-center relative w-[90%] overflow-hidden mt-8'>
-        <div className='w-[calc(300px*12)] flex gap-5 scroll hover:scroll-pause'>
-          {images.map((image, i) => (
-            <div
-              key={i}
-              style={{ backgroundImage: `url(${image})` }}
-              className="bg-no-repeat bg-cover bg-center w-[300px] h-[300px] hover:scale-110 transition-transform cursor-pointer"
-              onClick={() => setopen(image)}
-            />
+      <Carousel
+        plugins={[plugin.current]}
+        className="w-full mt-10"
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.reset}
+      >
+        <CarouselContent>
+          {images.map((image, index) => (
+            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+              <div className="p-1">
+                <Card className="bg-transparent border-none">
+                  <CardContent className="flex aspect-square items-center justify-center p-0">
+                    <Image src={image} alt={`Image ${index + 1}`} className="w-full h-full object-cover rounded-lg" />
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
           ))}
-        </div>
-      </div>
-        <div className='fixed z-20 top-0 left-0 bg-[rgba(0,0,0,0.8)] w-[100vw] h-[100vh]' style={{display: open? 'block' : 'none'}}>
-          <span onClick={()=>setopen('')} className='absolute top-10 z-10 right-5 font-extrabold cursor-pointer regular-64 text-gold-50'>&times;</span>
-          <Image src={open} alt='furniture' width={500} height={500} className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] max-h-[95%] max-w-[95%]' />
-        </div>
-      
+        </CarouselContent>
+        <CarouselPrevious className="bg-gold-50"/>
+        <CarouselNext className="bg-gold-50" />
+      </Carousel>
     </section>
   )
 }
-
-export default Gallery;
