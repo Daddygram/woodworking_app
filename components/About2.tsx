@@ -4,8 +4,8 @@ import React from 'react'
 const About2 = () => {
   return (
     <section className='max-container flexCenter mt-[200px] relative banner'>
-        <div className='w-[700px] absolute top-[-50px] left-0' id='banner-img'>
-            <Image src={"/furniture-banner-withfloor.png"} alt='furniture' width={800} height={800}/>
+        <div className='w-[700px] absolute top-[-220px] left-[7px]' id='banner-img'>
+            <Image src={"/shelf-with-tv-stand.png"} alt='furniture' width={800} height={800}/>
         </div>
         <div className='w-full md:p-20 p-5 flex flex-col'>
             <p className='text-gray-10 pt-4 pb-4 regular-16 max-w-[500px] text-center self-end about'>მოგესალმებით ჩვენს საიტზე, სადაც ავეჯის დამზადების  
