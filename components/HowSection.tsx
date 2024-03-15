@@ -45,7 +45,7 @@ const HowSection = () => {
             <Image
               key={step}
               src={`/step-${step}.png`}
-              alt={`step ${step}`}
+              alt={`WoodkoHouse step ${step}`}
               width={500}
               height={500}
               className={`transition-opacity duration-500 ease-in-out ${

@@ -40,7 +40,7 @@ export default function Gallery() {
               <div className="p-1">
                 <Card className="bg-transparent border-none">
                   <CardContent className="flex aspect-square items-center justify-center p-0">
-                    <Image src={image} alt={`Image ${index + 1}`} className="w-full h-full object-cover rounded-lg" />
+                    <Image src={image} alt={`WoodkoHouse aveji`} className="w-full h-full object-cover rounded-lg" />
                   </CardContent>
                 </Card>
               </div>

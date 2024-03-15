@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Woodko House',
-  description: 'Modern interior and furniture design',
+  description: 'თანამედროვე ავეჯის დიზაინი და დამზადება | ინტერიერის დიზაინი | ავეჯის აწყობა | სახლის დიზაინი | Tanamedrove avejis dizaini da damzadeba | interieris dizaini | avejis awyoba | saxlis dizaini',
 }
 
 export default function RootLayout({

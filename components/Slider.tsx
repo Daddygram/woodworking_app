@@ -56,13 +56,13 @@ export const Slider = () => {
         onMouseDown={handleStart}
         onMouseUp={handleEnd}
       >
-        <Image alt="" fill priority src={"/real-kitchen.jpg"} />
+        <Image alt="WoodkoHouse samzareulo" fill priority src={"/real-kitchen.jpg"} />
 
         <div
           className="absolute top-0 left-0 right-0 w-full max-w-[1536px] aspect-[4/3] m-auto overflow-hidden select-none"
           style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
         >
-          <Image fill priority alt="" src={"/render-kitchen.jpg"} />
+          <Image fill priority alt="WoodkoHouse dizaini" src={"/render-kitchen.jpg"} />
         </div>
 
         {/* Horizontal Arrows */}
