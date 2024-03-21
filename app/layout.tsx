@@ -21,6 +21,7 @@ export default function RootLayout({
       <Head>
         <meta httpEquiv="Content-Language" content="ka" />
         <meta name="author" content="Woodko House" />
+        <meta name="google-site-verification" content="Dsd1d9hUHlcTA4eHqggLMGhcRc3SYgIERj_pwd7w8hg" />
       </Head>
       <html lang="en" className='scroll-smooth hide-scrollbar'>
         <body>
